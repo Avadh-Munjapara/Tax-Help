@@ -1,0 +1,64 @@
+body{
+    background-size: cover;
+}
+.both{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 300px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 8px 8px 5px #444;
+    box-shadow: blur;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    background-color: rgb(24, 27, 46);
+    color: white;
+    text-align: center;
+}
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(24, 27, 46);
+    color: white;
+    text-align: center;
+    /* Aligns the links to the right */
+    /* Adds some padding around the links */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.header-links {
+    float: right;
+    /* Aligns the links to the right */
+    padding: 0.5rem 1rem;
+    /* Adds some padding around the links */
+}
+
+.header-links a {
+    color: white;
+    /* Sets the text color to white */
+    text-decoration: none;
+    /* Removes underline from links */
+    margin-left: 2rem;
+    /* Adds space between the links */
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+    /* Adds underline on hover */
+}
