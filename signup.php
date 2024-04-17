@@ -56,13 +56,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div><br>
                 <div>
                     <label>Confirm Password</label>
-                    <input type="password" id="confirm_pass"  name="confirm password" onkeyup="validate_password()" required>
+                    <input type="password" id="confirm_pass"  name="confirm password" onkeyup="validate_password()">
                 </div><br>
                 
                 <div>
                 <span id="wrong_pass_alert"></span>
-                <br>
-                    <input type="submit" id="create" class="sbm" value="Submit" onclick="wrong_pass_alert()>
+
+                    <input type="submit" id="create" value="Submit">
                   
                 </div>
             </form>
@@ -73,22 +73,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <script>
                 function validate_password(){
-                    let pass = document.getElementById('pass').value;
-            let confirm_pass = document.getElementById('confirm_pass').value;
-            if (pass != confirm_pass) {
-                document.getElementById('wrong_pass_alert').style.color = 'red';
+                 let pass=getElementById("pass").value;
+                 let confirm_pass=getElementById("confirm_pass").value;
+                 if(pass!==confirm_pass){
+                    document.getElementById('wrong_pass_alert').style.color = 'red';
                 document.getElementById('wrong_pass_alert').innerHTML
-                    = '☒ Use same password';
-                document.getElementById('create').disabled = true;
+                    = '☒ Use same password';  
+                    document.getElementById('create').disabled = true;
                 document.getElementById('create').style.opacity = (0.4);
-            } else {
+                }
+                    else {
                 document.getElementById('wrong_pass_alert').style.color = 'green';
                 document.getElementById('wrong_pass_alert').innerHTML =
                     '🗹 Password Matched';
                 document.getElementById('create').disabled = false;
                 document.getElementById('create').style.opacity = (1);
-            }
-                }   
+           
+                    }   
+                }
                                      </script>
 </body>
 
