@@ -1,4 +1,4 @@
-let edu_expense = document.getElementById("edu_expense");
+let edu_expense = document.getElementById("edu_expene");
 let medical_al = document.getElementById("medical_al");
 let house_rent_al = document.getElementById("house_rent_al");
 let other_al = document.getElementById("other_al");
