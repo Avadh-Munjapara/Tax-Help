@@ -33,9 +33,7 @@ function calculate_tax() {
   let total_deduction =
     edu_expense + g_p_f + professional_tax + std_deduction + amount;
   let net_income = gross_total_income - total_deduction;
-
   let tax_on_income = 0;
-
   if (net_income < 300000) {
     tax_on_income = 0;
   } else if (net_income >= 300000 && net_income < 600000) {

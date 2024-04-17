@@ -80,7 +80,7 @@ if (isset($_SESSION["username"])) {
     <button class="view" onclick="calculate_tax()">
       click here to see tax
     </button>
-    <script src="calc_tax.js"> </script>
+    <script src="calc_tax.js"></script>
   </body>
 </html>
 '; } else { header("location : login.php"); }

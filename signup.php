@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="both">
         <div class="header">
-            <h2>Goverment Of India</h2>
+            <h2>TAX-Help</h2>
             <div class="header-links">
                 <a href="login.php">Log in</a>
                 <a href="register.php">Sign Up</a>
@@ -56,24 +56,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div><br>
                 <div>
                     <label>Confirm Password</label>
-                    <input type="password" id="cpass" name="confirm password">
+                    <input type="password" id="confirm_pass"  name="confirm password" onkeyup="validate_password()">
                 </div><br>
-                <script>
-                 let pass=getElementById("pass").value;
-                 let cpass=getElementById("cpass").value;
-                 if(pass!==cpass){
-                 alert("password do not match");
-                 }
-                                     </script>
+                
                 <div>
-                    <input type="submit" value="Submit">
+                <span id="wrong_pass_alert"></span>
+
+                    <input type="submit" id="create" value="Submit">
+                  
                 </div>
             </form>
         </div>
     </div>
     <div class="footer">
-        <p>&copy; 2024 Goverment Of India. All rights reserved.</p>
+        <p>&copy; 2024 TAX-Help. All rights reserved.</p>
     </div>
+    <script>
+                function validate_password(){
+                 let pass=getElementById("pass").value;
+                 let confirm_pass=getElementById("confirm_pass").value;
+                 if(pass!==confirm_pass){
+                    document.getElementById('wrong_pass_alert').style.color = 'red';
+                document.getElementById('wrong_pass_alert').innerHTML
+                    = '☒ Use same password';  
+                    document.getElementById('create').disabled = true;
+                document.getElementById('create').style.opacity = (0.4);
+                }
+                    else {
+                document.getElementById('wrong_pass_alert').style.color = 'green';
+                document.getElementById('wrong_pass_alert').innerHTML =
+                    '🗹 Password Matched';
+                document.getElementById('create').disabled = false;
+                document.getElementById('create').style.opacity = (1);
+           
+                    }   
+                }
+                                     </script>
 </body>
 
 </html>
