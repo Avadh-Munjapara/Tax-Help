@@ -9,78 +9,111 @@ if (isset($_SESSION["username"])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Income Tax Calculator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
+  <body background="background.jpg">
+  <div class="both">
+  <div class="header">
+            <h2>Goverment Of India</h2>
+            <div class="header-links">
+                <a href="login.php">Log in</a>
+                <a href="signup.php">Sign Up</a>
+                <a href="mailto:">Contact Us</a>
+            </div>
+        </div>
+        <div>
     <h1>Income Tax Calculator</h1>
+    </div></div>
     <br />
-    <form action="db_query.php" method="POST">
+    <div class="content">
+    <form class="center" action="db_query.php" method="POST">
+    <table>
+      <tr>
       <label for="edu_expense">Education Expense:</label>
       <input
+        align="center"
         type="text"
         id="edu_expense"
         name="edu_expense"
         required
-      /><br /><br />
+      />
+      </tr><br /><br />
 
+      <tr>
       <label for="medical_al">Medical Allowance:</label>
       <input
         type="number"
         id="medical_al"
         name="medical_al"
         required
-      /><br /><br />
+      />
+      </tr><br /><br />
 
+      <tr>
       <label for="house_rent_al">House Rent Allowance:</label>
       <input
         type="number"
         id="house_rent_al"
         name="house_rent_al"
         required
-      /><br /><br />
+      />
+      </tr><br /><br />
 
+      <tr>
       <label for="other_al">Other Allowance:</label>
-      <input type="number" id="other_al" name="other_al" required /><br /><br />
+      <input type="number" id="other_al" name="other_al" required /></tr><br /><br />
 
+      
+      <tr>
       <label for="basic_salary">Basic Salary:</label>
       <input
         type="number"
         id="basic_salary"
         name="basic_salary"
         required
-      /><br /><br />
+      /></tr><br /><br />
 
+      <tr>
       <label for="other_income">Other Income:</label>
       <input
         type="number"
         id="other_income"
         name="other_income"
         required
-      /><br /><br />
+      />
+      </tr><br /><br />
 
-      <label for="professional_tax">Professional Tax:</label>
-      <input type="text" id="professional_tax" name="professional_tax" /><br />
+      <tr><label for="professional_tax">Professional Tax:</label>
+      <input type="text" id="professional_tax" name="professional_tax" /></tr><br /><br />
 
-      <label for="amount">Amount:</label>
-      <input type="text" id="amount" name="amount" /><br />
+      <tr><label for="amount">Amount:</label>
+      <input type="text" id="amount" name="amount" /></tr><br><br />
 
-      <label for="sec_no">Section Number:</label>
-      <input type="text" id="sec_no" name="sec_no" /><br />
+      <tr><label for="sec_no">Section Number:</label>
+      <input type="text" id="sec_no" name="sec_no" /></tr><br><br />
 
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" /><br />
+      <tr><label for="name">Name:</label>
+      <input type="text" id="name" name="name" /></tr><br><br />
       <p id="para"></p>
-      <input type="submit" value="Submit" />
-    </form>
-    <form action="logout.php" method="post">
+      <div class="btn"> <input type="submit" value="Submit" /> </div> <br>
+      </form>
+      <form action="logout.php" method="post">
       <div class="btn">
-        <input type="submit" name="logout" value="logout" />
-      </div>
-    </form>
-    <button class="view" onclick="calculate_tax()">
+      <input type="submit" name="logout" value="logout" /> 
+      </div><br>
+      </table>
+      </form>
+      <div class="btn"><button class="view" onclick="calculate_tax()">
       click here to see tax
-    </button>
-    <script src="calc_tax.js"></script>
+      </button> </div>
+      <script src="calc_tax.js"> </script>
+      </div>
+      <div class="footer">
+        <p>&copy; 2024 Goverment Of India. All rights reserved.</p>
+      </div>
   </body>
 </html>
-'; } else { header("location : login.php"); }
+';
+} else {
+  header("location : login.php");
+}
