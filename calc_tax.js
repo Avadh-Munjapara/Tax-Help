@@ -49,24 +49,5 @@ function calculate_tax() {
   }
   let health_edu_cess = 0.04 * tax_on_income;
   let total_tax = tax_on_income + health_edu_cess;
-  console.log("Education Expense:", edu_expense);
-  console.log("Medical Allowance:", medical_al);
-  console.log("House Rent Allowance:", house_rent_al);
-  console.log("Other Allowance:", other_al);
-  console.log("Basic Salary:", basic_salary);
-  console.log("Other Income:", other_income);
-  console.log("Professional Tax:", professional_tax);
-  console.log("Amount:", amount);
-  console.log("Section Number:", sec_no);
-  console.log("Name:", name);
-  console.log("Gross Salary:", gross_salary);
-  console.log("Gross Total Income:", gross_total_income);
-  console.log("Gross Provident Fund:", g_p_f);
-  console.log("Standard Deduction:", std_deduction);
-  console.log("Total Deduction:", total_deduction);
-  console.log("Net Income:", net_income);
-  console.log("Tax on Income:", tax_on_income);
-  console.log("Health & Education Cess:", health_edu_cess);
-  console.log("Total Tax:", total_tax);
   para.innerHTML = total_tax;
 }

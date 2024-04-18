@@ -39,9 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="both">
         <div class="header">
-            <h2>Goverment Of India</h2>
+            <h2>TAX-Help</h2>
             <div class="header-links">
-                <a href="login.php">Log in</a>
                 <a href="register.php">Sign Up</a>
                 <a href="mailto:">Contact Us</a>
             </div>
@@ -66,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <div class="footer">
-        <p>&copy; 2024 Goverment Of India. All rights reserved.</p>
+        <p>&copy; 2024 TAX-Help. All rights reserved.</p>
     </div>
 </body>
 

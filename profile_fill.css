@@ -1,56 +1,36 @@
-body{
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
     background-size: cover;
 }
-h1{
+
+h1 {
+    padding-top: 1rem;
     text-align: center;
 }
-.center{
-    /* border: 1px solid black; */
-    word-spacing: 5px;
-    align-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-}
- label{
-    grid-column:1/2;
-}
-.center input,button{
-    grid-column:2/3;
-}
-.nam{
-    width:100px;
-    float:left;
-    color:white;
-}
-.content {
-    padding-top:0;
-    max-width: 500px;
-    margin: auto;
-}
-table{
-    border: 1px solid black;
-    width:80%;
-}
-tr:nth-child(even){
-    background-color: #f2f2f2;
-}
-.header{
+
+.header {
     background-color: rgb(24, 27, 46);
     color: white;
     text-align: center;
 }
+
 .footer {
     width: 100%;
-    height: auto;
+    height: 30px;
     background-color: rgb(24, 27, 46);
     color: white;
     text-align: center;
     /* Aligns the links to the right */
     /* Adds some padding around the links */
 }
-
+.btn{
+    grid-column: 1/span 2;
+}
 
 .header-links {
     float: right;
@@ -72,12 +52,41 @@ tr:nth-child(even){
     text-decoration: underline;
     /* Adds underline on hover */
 }
-.both{
+
+.both {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.btn{
 
+.btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom:3rem;
+}
+
+.center {
+    margin-top: 3rem;
+    /* border: 1px solid black; */
+    word-spacing: 5px;
+    align-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    row-gap: 0px;
+    
+}
+label{
+    grid-column:1/2;
+}
+input,button{
+    grid-column:2/3;
+}
+
+.content {
+    display: flex;
+    align-items: center;
 }

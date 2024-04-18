@@ -48,15 +48,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div>
                     <label>Username</label>
-                    <input type="text" name="username">
+                    <input type="text" name="username" required>
                 </div> <br>
                 <div>
                     <label>Password</label>
-                    <input type="password" id="pass" name="password">
+                    <input type="password" id="pass" name="password" onkeyup="validate_password()" required>
                 </div><br>
                 <div>
                     <label>Confirm Password</label>
-                    <input type="password" id="confirm_pass" name="confirm password" onkeyup="validate_password()" required>
+                    <input type="password" id="confirm_pass" name="confirm password" onkeyup="validate_cpassword()" required>
                 </div><br>
 
                 <span id="wrong_pass_alert"></span>
@@ -72,6 +72,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <script>
         function validate_password(){
+            let pass = document.getElementById('pass').value;
+            let regex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+            if(regex.test(pass)) {
+                document.getElementById('wrong_pass_alert').style.color = 'green';
+                document.getElementById('wrong_pass_alert').innerHTML =
+                    '🗹 Password is strong';
+            }
+            else{
+                document.getElementById('wrong_pass_alert').style.color = 'red';
+                document.getElementById('wrong_pass_alert').innerHTML
+                    = '☒ Use strong password';
+               
+            }
+        }
+        function validate_cpassword(){
             let pass = document.getElementById('pass').value;
             let confirm_pass = document.getElementById('confirm_pass').value;
             if (pass != confirm_pass) {
