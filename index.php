@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo $_SESSION["username"];
 if (isset($_SESSION["username"])) {
   echo '
     <!DOCTYPE html>
@@ -10,6 +9,11 @@ if (isset($_SESSION["username"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Income Tax Calculator</title>
     <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
     body{
       background-size: cover;
     }
@@ -21,8 +25,9 @@ if (isset($_SESSION["username"])) {
       height: 100px;
       background-color: rgb(24, 27, 46);
       color: white;
-      text-align: center;
-      align-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .header{
       background-color: rgb(24, 27, 46);
@@ -64,7 +69,7 @@ if (isset($_SESSION["username"])) {
   }
     .profile-link {
       position: absolute;
-      left: 10px; /* Align with the profile icon */
+      left: 15px; /* Align with the profile icon */
       bottom: 0; /* Position below the profile icon */
       color: white; /* Match the header text color */
       text-decoration: none; /* Optional: removes the underline */
@@ -87,9 +92,9 @@ if (isset($_SESSION["username"])) {
   <body background="background.jpg">
       <div class="both">
         <div class="header">
-            <h1>Tax Help</h1>
+            <h1>TAX-Help</h1>
             <img src="icon.png" alt="Profile Picture" class="profile-icon">
-            <a href="profile.php" class="profile-link">Profile</a>
+            <a href="profile.php" class="profile-link">'.$_SESSION["username"].'</a>
             <div class="header-links">
             <a href="mailto:">Contact Us</a>
             </div>
@@ -141,7 +146,7 @@ if (isset($_SESSION["username"])) {
       /><br /><br />
 
       <label for="professional_tax">Professional Tax:</label>
-      <input type="text" id="professional_tax" name="professional_tax" /><br /><br>
+      <input type="text" id="professional_tax" name="professional_tax" value=1400 readonly /><br /><br>
 
       <label for="amount">Amount:</label>
       <input type="text" id="amount" name="amount" /><br /><br>
