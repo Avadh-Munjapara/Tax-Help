@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="signup.css">
 </head>
 
-<body>
+<body background="background.jpg">
     <div class="both">
         <div class="header">
             <h2>TAX-Help</h2>

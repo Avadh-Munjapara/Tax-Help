@@ -59,8 +59,20 @@ if (!isset($_SESSION["username"])) {
     <input type="date" id="joining_date" name="joining_date" required><br><br>
 
     <label for="contact_no">Contact Number:</label>
-    <input type="tel" id="contact_no" name="contact_no" required><br><br>
+    <input type="tel" id="contact_no" name="contact_no" required onkeyup="val_m()"><br><br>
 
+    <span id="mbl" style="display:none"></span>
+<script>
+  function val_m(){
+    let mobile=document.getElementById("contact_no").value;
+    let mobile_no=/^([+]\d{2})?\d{10}$/
+    if(!mobile_no.test(mobile)){
+      let mbl=document.getElementById("mbl");
+      mbl.setAttribute("display","block");
+      mbl.innerHTML="contact number must be 10 digits long";
+    }
+  }
+</script>
     <label for="hno">House Number:</label>
     <input type="text" id="hno" name="hno" required><br><br>
     
@@ -69,6 +81,7 @@ if (!isset($_SESSION["username"])) {
 
     <label for="pincode">Pin Code:</label>
     <input type="number" id="pincode" name="pincode" required><br><br>
+
     
     <div class="btn"> <input type="submit" value="Submit"> </div>
     
