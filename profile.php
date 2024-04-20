@@ -14,7 +14,7 @@
     <div class="header">
         <div class="imgcont">
           <img src="icon.png" alt="Profile Picture" class="profile-icon">
-          <a href="profile.html" class="profile-link"><?php echo $_SESSION["username"]?></a>
+          <a href="index.php" class="profile-link"><?php echo $_SESSION["username"]?></a>
         </div>
         <h1 class="heading">TAX-Help</h1>
         <div class="header-links">

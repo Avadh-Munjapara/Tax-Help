@@ -25,6 +25,10 @@ if (isset($_SESSION["username"])) {
       justify-content: space-between;
       align-items: center;
     }
+    .headin{
+      margin-top:2rem;
+      margin-bottom:1rem;
+    }
     .imgcont{
       display: flex;
       flex-direction: column;
@@ -112,7 +116,7 @@ if (isset($_SESSION["username"])) {
             <a href="mailto:">Contact Us</a>
             </div>
         </div>
-        <h1>Income Tax Calculator</h1><br />
+        <h1 class="headin">Income Tax Calculator</h1><br />
         <div class="tc">
           <form action="db_query.php" method="POST" class="center">
             <label for="edu_expense">Education Expense:</label>
