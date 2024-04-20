@@ -14,7 +14,9 @@ if (isset($_SESSION["username"])) {
       padding:0;
       box-sizing: border-box;
     }
-  
+    body{
+      background-size: cover;
+    }
     .header{
       background-color: rgb(24, 27, 46);
       color: white;
@@ -52,9 +54,6 @@ if (isset($_SESSION["username"])) {
       color: white; 
       text-decoration: none; 
     }
-    body{
-      background-size: cover;
-    }
     h1{
       text-align: center;
     }
@@ -91,6 +90,14 @@ if (isset($_SESSION["username"])) {
     .lg{
       margin-bottom: 1rem;
     }
+    /* .tc{
+      display: grid;
+      grid-template-columns: 100px 100px;
+      grid-template-rows: ;
+    }
+    .tc input{
+
+    } */
     </style>
     </head>
 
@@ -106,63 +113,66 @@ if (isset($_SESSION["username"])) {
             </div>
         </div>
         <h1>Income Tax Calculator</h1><br />
-       <form action="db_query.php" method="POST" class="center">
-        <label for="edu_expense">Education Expense:</label>
-        <input
-          type="text"
-          id="edu_expense"
-          name="edu_expense"
-          required
-        /><br /><br />
-
-       <label for="medical_al">Medical Allowance:</label>
-       <input
-        type="number"
-        id="medical_al"
-        name="medical_al"
-        required
-       /><br /><br />
-
-       <label for="house_rent_al">House Rent Allowance:</label>
-       <input
-        type="number"
-        id="house_rent_al"
-        name="house_rent_al"
-        required
-       /><br /><br />
-
-       <label for="other_al">Other Allowance:</label>
-       <input type="number" id="other_al" name="other_al" required /><br /><br />
-
-       <label for="basic_salary">Basic Salary:</label>
-       <input
-        type="number"
-        id="basic_salary"
-        name="basic_salary"
-        required
-       /><br /><br />
-
-       <label for="other_income">Other Income:</label>
-       <input
-        type="number"
-        id="other_income"
-        name="other_income"
-        required
-       /><br /><br />
- 
-       <label for="professional_tax">Professional Tax:</label>
-       <input type="text" id="professional_tax" name="professional_tax" value=1400 readonly /><br /><br>
-
-       <label for="amount">Amount:</label>
-       <input type="text" id="amount" name="amount" /><br /><br>
-
-       <label for="sec_no">Section Number:</label>
-       <input type="text" id="sec_no" name="sec_no" /><br /><br>
-
-       <label for="name">Name:</label>
-       <input type="text" id="name" name="name" /><br /><br>
-       <p id="para"></p>
-       </form>
+        <div class="tc">
+          <form action="db_query.php" method="POST" class="center">
+            <label for="edu_expense">Education Expense:</label>
+            <input
+              type="text"
+              id="edu_expense"
+              name="edu_expense"
+              required
+            /><br /><br />
+    
+           <label for="medical_al">Medical Allowance:</label>
+           <input
+            type="number"
+            id="medical_al"
+            name="medical_al"
+            required
+           /><br /><br />
+    
+           <label for="house_rent_al">House Rent Allowance:</label>
+           <input
+            type="number"
+            id="house_rent_al"
+            name="house_rent_al"
+            required
+           /><br /><br />
+    
+           <label for="other_al">Other Allowance:</label>
+           <input type="number" id="other_al" name="other_al" required /><br /><br />
+    
+           <label for="basic_salary">Basic Salary:</label>
+           <input
+            type="number"
+            id="basic_salary"
+            name="basic_salary"
+            required
+           /><br /><br />
+    
+           <label for="other_income">Other Income:</label>
+           <input
+            type="number"
+            id="other_income"
+            name="other_income"
+            required
+           /><br /><br />
+     
+           <label for="professional_tax">Professional Tax:</label>
+           <input type="text" id="professional_tax" name="professional_tax" value=1400 readonly /><br /><br>
+    
+           <label for="amount">Amount:</label>
+           <input type="text" id="amount" name="amount" /><br /><br>
+    
+           <label for="sec_no">Section Number:</label>
+           <input type="text" id="sec_no" name="sec_no" /><br /><br>
+    
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="name" /><br /><br>
+           <p id="para"></p>
+           </form>
+        </div>
+        
        <div class="sub">
         <input type="submit" value="Submit" /> 
        </div>
