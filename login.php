@@ -38,17 +38,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body background="background.jpg">
     <div class="both">
-        <!-- <div class="header">
+        <div class="header">
             <h2>TAX-Help</h2>
             <div class="header-links">
                 <a href="register.php">Sign Up</a>
                 <a href="mailto:">Contact Us</a>
-            </div>
-        </div> -->
-        <div class="header">
-            <h1 class="heading">TAX-Help</h1>
-            <div class="header-links">
-            <a href="mailto:">Contact Us</a>
             </div>
         </div>
         <div class="login">
@@ -71,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <div class="footer">
-        <p>&copy; Tax Help. All rights reserved.</p>
+        <p>&copy; 2024 TAX-Help. All rights reserved.</p>
     </div>
 </body>
 

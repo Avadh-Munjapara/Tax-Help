@@ -17,8 +17,7 @@ if (!isset($_SESSION["username"])) {
     $pincode = $_POST["pincode"];
     pg_query($conn, "INSERT INTO Teacher (uname,f_name, l_name, m_name, joining_date, contact_no, h_no, street, pin_code) 
                               VALUES ('$uname','$fname', '$lname', '$mname', '$joining_date', '$contact_no', '$hno', '$street', '$pincode')");
-    echo "New record inserted successfully.";
-    echo "<a href='index.php'>click here to go to main page</a>";
+    header("location: index.php");
   } else {
     echo " user is alreay registerd";
     echo "<a href='index.php'>click here to go to main page</a>";
